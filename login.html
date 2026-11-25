@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SkillSprout Login</title>
+<style>
+body {
+    font-family: Arial;
+    background: #eaf7ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    background: white;
+    padding: 35px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #aaa;
+    text-align: center;
+}
+
+h1 {
+    color: #16a36a;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #16a36a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #108653;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h1>🌱 SkillSprout</h1>
+    <h3>Welcome Back!</h3>
+    <p>Login to continue</p>
+
+    <form onsubmit="login(event)">
+        <input type="email" id="email"
+        placeholder="Enter Email" required>
+
+        <input type="password" id="password"
+        placeholder="Enter Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account?
+    <a href="#">Sign Up</a></p>
+</div>
+
+<script>
+function login(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (email && password) {
+        window.location.href = "frontend.html";
+    }
+}
+</script>
+
+</body>
+</html>
